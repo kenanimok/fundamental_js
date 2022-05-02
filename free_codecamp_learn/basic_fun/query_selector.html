@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="message-1" class="message">id=message-1, class=message</div>
+    <div id="message-2" class="message">id=message-2, class=message</div>
+    <div id="message-3" class="message">id=message-3, class=message</div>
+
+
+    <script>
+        // let messeages = document.getElementsByClassName('message');
+        //  for(let i = 0; i< messeages.length;i++){
+        //   messeages[i].innerHTML ='wwwww';
+        //   }
+
+        let messeages = document.querySelectorAll('.message');   // ทุก  clas message
+            messeages.forEach((message) => {
+                message.innerHTML ='ไม่ต้องห่วง';  
+        });
+
+        let messeage = document.querySelector('#message-3');  // เฉพาะ  id  3
+            messeage.innerHTML = 'ไม่ต้องห่วงฉัน';
+
+
+    
+     
+    
+    </script>
+</body>
+</html>

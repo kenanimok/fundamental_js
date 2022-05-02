@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+          <h2>ค่าbmi</h2> 
+          <ul>
+              <li id="helt"></li>
+          </ul>
+    <script>    
+    //   let height = 170;
+    //   let weight = 50;
+    //   let hights = height/100
+    //   let xx = hights *hights
+
+    //   let bmi = weight/xx
+
+    //     console.log(xx)
+    //     console.log("ผล bmi",bmi)
+
+
+
+
+            function bmi(weight,hight){
+
+                let Change_hight = hight/100
+                let x =Math.pow(Change_hight,2)
+                let  all = weight/x
+                // return console.log(all)
+                document.getElementById("helt").innerHTML = all ;
+            }
+
+            bmi(50,170);
+            bmi(60,170);
+
+            // console.log(ggg)
+
+
+
+
+            
+        
+    </script>
+    
+</body>
+</html>

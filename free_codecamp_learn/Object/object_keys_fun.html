@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Rabbit(name, breed, color, weight) {
+                this.name = name;
+                this.breed = breed;
+                this.color = color;
+                this.weight = weight;
+                // this.talk = function () {
+                // // method ชื่อ  talk
+                // console.log(this.name + ", hoho");
+                // };
+            }
+
+            let rabbit1 = new Rabbit("MINI", "Lion", "white", 1.5); //แบบ  constructure
+
+            // rabbit1.talk();
+            console.log(rabbit1);       // Rabbit {name: 'MINI', breed: 'Lion', color: 'white', weight: 1.5}
+            
+          // ข้างบน รื้อฝื้นอันเก่าเฉยๆ 
+
+
+
+
+          var object = { 70: 'x', 21: 'y', 35: 'z' };
+            console.log(Object.keys(object));  //result ดู key object ['21', '35', '70']
+
+
+            let users = {
+            Alan: {
+                age: 27,
+                online: false
+            },
+            Jeff: {
+                age: 32,
+                online: true
+            },
+            Sarah: {
+                age: 48,
+                online: false
+            },
+            Ryan: {
+                age: 19,
+                online: true
+            }
+            };
+
+            function getArrayOfUsers(obj) {
+            
+            return Object.keys(obj);
+            }
+
+            console.log(getArrayOfUsers(users));  // [ 'Alan', 'Jeff', 'Sarah', 'Ryan' ] 
+  
+
+
+
+    </script>
+  </body>
+</html>

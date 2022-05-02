@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            let foods = {
+            apples: 25,
+            oranges: 32,
+            plums: 28
+            };
+
+            foods.bananas=13;
+            foods.grapes=35;
+            foods.strawberries=27;
+
+            // add object  
+
+
+
+            let user = {
+            name: "Kenneth",
+            age: 28,
+            data: {
+                username: "kennethCodesAllDay",
+                joinDate: "March 26, 2016",
+                organization: "freeCodeCamp",
+                friends: ["Sam", "Kira", "Tomo"],
+                location: {
+                city: "San Francisco",
+                state: "CA",
+                country: "USA"
+                }
+            }
+            };
+
+            function addFriend(userObj, friend) {
+            userObj.data.friends.push(friend);
+            return userObj.data.friends;
+
+            }
+
+            console.log(addFriend(user, "Pete")) // result [ 'Sam', 'Kira', 'Tomo', 'Pete' ]  เพิ่มโดยใช้ฟังชั่น
+   
+            console.log("user::::",user)
+
+                          
+
+
+                  
+
+
+
+console.log(foods);
+        </script>
+    
+</body>
+</html>

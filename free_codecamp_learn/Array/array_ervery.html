@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <button onclick="myFunction()">check every </button>
+    <script>
+                let users = {
+                    Alan: {
+                        age: 27,
+                        online: true
+                    },
+                    Jeff: {
+                        age: 32,
+                        online: true
+                    },
+                    Sarah: {
+                        age: 48,
+                        online: true
+                    },
+                    Ryan: {
+                        age: 19,
+                        online: true
+                    }
+                    };
+
+                    function isEveryoneHere(userObj) {
+                        return ["Alan", "Jeff", "Sarah", "Ryan"].every(name =>
+                        userObj.hasOwnProperty(name)
+                        );
+                    }   
+                    console.log(isEveryoneHere(users));  // result true 
+
+
+
+
+                    let users2 = {
+                    Alan: {
+                        age: 27,
+                        online: true
+                    },
+                    Jeff: {
+                        age: 32,
+                        online: true
+                    },
+                    Sarah: {
+                        age: 48,
+                        online: true
+                    },
+                    Ryan: {
+                        age: 19,
+                        online: true
+                    }
+                    };
+
+                    function isEveryoneHere2(userObj2) {
+                        return ["Alan", "Jeff", "Sarah", "Ryan","Heeeee"].every(name =>
+                        userObj2.hasOwnProperty(name)
+                        );
+                    }   
+                    console.log(isEveryoneHere2(users2));  // result false 
+
+
+
+
+                    var ages = [32, 33, 16, 40];
+
+                    function checkAdult(age) {
+                    return age >= 18;
+                    }
+
+                    function myFunction() {
+                    document.getElementById("demo").innerHTML = ages.every(checkAdult);
+                    }
+
+
+                    const isBelowThreshold = (currentValue) => currentValue < 40;
+                    
+                    
+                    const array1 = [1, 30, 39, 29, 10, 13];
+
+                    console.log(array1.every(isBelowThreshold));
+                    // expected output: true
+
+    </script>
+    
+</body>
+</html>

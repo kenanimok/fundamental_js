@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const names = ['Alex', 'Bob', 'Johny', 'Atta'];
+        const obj = Object.assign({},names)
+        console.log(obj)  // result    // {0: "Alex", 1: "Bob", 2: "Johny", 3: "Atta"}
+
+
+
+        const names2 = ['Alex', 'Bob', 'Johny', 'Atta'];
+        const obj2 = {...names};
+        console.log(obj2);  // {0: "Alex", 1: "Bob", 2: "Johny", 3: "Atta"}
+
+
+
+        const names3 = ['Alex', 'Bob', 'Johny', 'Atta'];
+        const obj3 = {};
+        for (let i = 0; i < names3.length; i++) {
+            obj3[i] = names[i];
+        }
+        console.log(obj3);        // {0: "Alex", 1: "Bob", 2: "Johny", 3: "Atta"}
+
+
+
+
+    </script>
+    
+</body>
+</html>

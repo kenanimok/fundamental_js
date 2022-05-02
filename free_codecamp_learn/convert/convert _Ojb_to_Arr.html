@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Obj to Array</title>
+</head>
+<body>
+    <script>
+
+        const num1 ={
+            one:1,
+            two:2,
+        }
+       let key =  Object.keys(num1); 
+        console.log("convertkey to ar ===",key)   // ['one','two']
+
+        
+      const num2 ={
+          one:1,
+          two:2,
+      } 
+      let v = Object.values(num2);
+       console.log("convertValue to ar :::",v) //result  ['1','2']
+ 
+
+      const num3 ={
+          one:1,
+          two:2,
+      }
+      let k_v = Object.entries(num3);
+        console.log("convert key and values to arr ::",k_v)//  ['one,1',['two,2']
+
+          
+    </script>
+    
+</body>
+</html>

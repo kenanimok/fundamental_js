@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lnumng="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiple</title>
+</head>
+<body>
+    ตัวตั้ง<input  type="number" id="num">
+    แม่สููตรคูณ <input type="number"id="mother">
+    <button onclick="printMultiple()">click</button>
+      
+    
+    <script>
+
+       let num = document.getElementById('num');
+       let mother=  document.getElementById('mother');
+
+        function printMultiple(){
+            let number = Number(num.value);
+            let mothers = Number(mother.value);
+            for(let i=1;i<=mothers;i++){
+                console.log(number*i);
+
+            }
+ 
+
+        }
+
+
+        
+
+        // function  check_multiple(num,mother){
+        //     for(i=0;i<mother;i++){
+        //         console.log("ผลการคูณ",num+'x'+i+'='+num*i)
+    
+        //     }           
+        // }
+        // check_multiple(2,12)
+    </script>
+
+    
+    
+</body>
+</html>

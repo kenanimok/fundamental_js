@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+           let obj = [
+               {name:"ken",lastname:"wayu",age:22},
+               {name:"hee",lastname:"wayu",age:22}
+        ]
+         let result = obj.filter((obj)=>obj.name=="ken"); // result name: 'ken', lastname: 'wayu', age: 22
+          console.log(result)
+
+
+          let person = [
+               {name:"ken",lastname:"wayu",age:22},
+               {name:"hee",lastname:"wayu",age:22}
+        ]
+        person[0].prefix = "นาย"; 
+        console.log("perosn ",person) 
+        // result  {name: 'ken', lastname: 'wayu', age: 22, prefix: 'นาย'}
+        //{name: 'hee', lastname: 'wayu', age: 22}
+
+
+
+
+     </script>
+</body>
+</html>

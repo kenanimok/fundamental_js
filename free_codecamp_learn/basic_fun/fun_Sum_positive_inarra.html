@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <script>
+            // Example [1,-4,7,12] => 1 + 7 + 12 = 20
+
+
+            function positiveSum(arr) {
+            return console.log(arr.reduce((a,b)=> a + (b > 0 ? b : 0)));
+            }
+            positiveSum([1,-4,7,12])  // result 20
+
+
+
+            //use for loop 
+            function positiiveSum2(arr){
+                var total  = 0;
+                for(i=0;i<arr.length;i++){
+                    if(arr[i]>0){
+                        arr[i]+= total
+                    }
+                }
+                return total;      //result 20
+            }
+            positiiveSum2([1,-4,7,12])
+
+            let val1 =5
+            let  val2 =10
+            let val23 = val1 += val2 
+            console.log(val1 )   // val1 = 15 
+            // นำค่าจากตัวแปรด้านหลังมาบวกกับตัวแปรด้านหน้าแล้วกำหนดค่าให้ตัวแปรด้านหน้า	
+
+        </script>
+
+    
+</body>
+</html>

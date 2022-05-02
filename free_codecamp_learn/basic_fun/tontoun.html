@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1 id="grade"></h1>
+       กรอก คะแนน  <input type="number" id="num">
+        <button onclick="Check_grage()" >click grade</button>
+
+        
+
+    <script>
+             var washing_machine = {
+        data: [
+            {
+                washing_machine_brand_code: "WMB001",
+                washing_machine_brand_detail: "",
+                washing_machine_brand_name: "LG",
+                washing_machine_generation_code: "WMG001",
+                washing_machine_generation_name: "FC1409S4W",
+                washing_machine_type_code: "MT01",
+                washing_machine_type_name: "เครื่องซักผ้าฝาหน้า",
+            },
+            {
+                washing_machine_brand_code: "WMB002",
+                washing_machine_brand_detail: "",
+                washing_machine_brand_name: "XXX",
+                washing_machine_generation_code: "WMG002",
+                washing_machine_generation_name: "FC1408S4W",
+                washing_machine_type_code: "MT01",
+                washing_machine_type_name: "เครื่องซักผ้าฝาหน้า",
+            }
+        ],
+        error: [],
+        query_result: true,
+        server_result: true
+    }
+    console.log(washing_machine) ///{data: Array(2), error: Array(0), query_result: true, server_result: true}
+    console.log("ได้ brand",washing_machine.data[0].washing_machine_brand_name)//Lg
+    console.log("ได้ brand",washing_machine.data[1].washing_machine_brand_name)//xxx
+
+
+
+
+     let num = document.getElementById('num');
+
+            function Check_grage(){
+             let number =Number(num.value);   
+                if(number <= 50){
+                document.getElementById("grade").innerHTML ="grade F";
+                }else if(number >= 60){
+                document.getElementById("grade").innerHTML ="grade D";
+                }
+            }
+
+            //sprace opertor
+
+            let arr1 = [1,2,3]
+            let arr2 = [4,5,6]
+      
+            let all_arr = [...arr1,...arr2];
+            console.log("all spread",all_arr); // result [1, 2, 3, 4, 5, 6]
+            
+
+            function sumarr(ar1,ar2){
+                let  sum_arr =[...ar1,...ar2]
+                return  console.log("sumarr:::",sum_arr);  //result [10, 20, 30, 40]
+            } 
+            sumarr([10,20],[30,40])
+
+
+
+
+
+            function copyMachine(arr, num) {
+                let newArr = [];
+                while (num >= 1) {
+                    newArr.push([...arr]);
+                    num--;
+                }
+                return newArr;
+            }
+
+        console.log(copyMachine([true, false, true], 2));  //[Array(3), Array(3)]  ยัดตวามจำนวน ตัวเลข
+
+   
+        const change_arr =[10,20,true,"ken"];
+             change_arr[0]= 99;
+             change_arr[3]= "animok";
+        console.log("แปลี่ยนแปลงค่าใน arrr",change_arr)  // result [99, 20, true, 'animok']
+
+        
+        // add obj
+        const objken  =[{
+            ken:"animok",
+            learn:"js",
+            user:20
+        }]
+
+        objken[0].lastname="wayu";
+        console.log("objken",objken)  // [{ken: 'animok', learn: 'js', user: 20, lastname: 'wayu'}]
+        
+
+        const person ={
+            firstname:"jon",
+            lastname:"carter",
+            prefix:"นาย",
+            age:50
+        }
+        // delete person.age
+        // console.log("ลบobj",person)
+         //{firstname: 'jon', lastname: 'carter','prefix:นาย'}
+   
+         const obja = {
+        a: 'dog',
+        b: 'cat',
+        c: 'mouse',
+        d: 'cow',
+        e: 'horse',
+    };
+        const {a, e, ...updatedObject} = obja;
+        console.log(obja) // result{a: 'dog', b: 'cat', c: 'mouse', d: 'cow', e: 'horse'}
+        console.log(updatedObject) // result  {b: 'cat', c: 'mouse', d: 'cow'}
+
+
+        //convert obj to arr
+        const numbersx = {
+        one: 1,
+        two: 2
+        }
+
+        const  conOb_Ar   =  Object.values(numbersx);
+        // [ 1, 2 ]
+        console.log("convert obj to arr",conOb_Ar)
+
+
+  
+           
+
+     
+
+
+    </script>
+    
+</body>
+</html>

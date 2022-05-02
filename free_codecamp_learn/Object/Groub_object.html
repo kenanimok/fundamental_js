@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groub_object</title>
+</head>
+<body>
+
+    <script>
+            const people = [
+            { name: 'Alice', age: 21 },
+            { name: 'Max', age: 20 },
+            { name: 'Jane', age: 20 }
+            ];
+
+            function groupBy(objectArray, property) {
+            return objectArray.reduce((acc, obj) =>{
+                let key = obj[property] //ket //20 21 
+                if (!acc[key]) {
+                acc[key] = []
+                }
+                acc[key].push(obj)
+                return acc
+            }, {})
+            }
+
+            let groupedPeople = groupBy(people, 'age')
+
+            console.log(groupedPeople);
+
+
+            // groupedPeople is:
+            // {
+            //   20: [
+            //     { name: 'Max', age: 20 },
+            //     { name: 'Jane', age: 20 }
+            //   ],
+            //   21: [{ name: 'Alice', age: 21 }]
+            // }
+
+
+
+     
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

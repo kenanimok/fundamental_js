@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+
+
+
+      function findLongestWordLength(str) {
+      let words = str.split(' ');
+      let maxLength = 0;
+
+      for (let i = 0; i < words.length; i++) {
+          if (words[i].length > maxLength) {
+          maxLength = words[i].length;
+          }
+      }
+
+      return(
+          console.log(maxLength)      ///โจท.ให้หาว่า  // ข้อความ พวก the ข้างล่างข้อความไหน ยาวสุด  // result  6 ว่ามีค่าความยาวเท่าไร
+          )
+
+      }
+
+      findLongestWordLength("The quick brown fox jumped over the lazy dog");
+   
+
+
+      ///ตัวอย่างการ  split 
+      let message = 'I am a Happy Go lucky Guy';
+        console.log(message.split(' ', 4)); // ["I", "am", "a", "Happy"] 
+
+
+
+
+      function findLongestWordLengthx(strx) {
+        let wordsx = strx.split(" ");
+        let maxLengthx = 0;
+
+        for (let i = 0; i < wordsx.length; i++) {
+          x = console.log(wordsx[i])
+          
+        }
+        return x; 
+
+      }
+      findLongestWordLengthx("The quick brown fox jumped over the lazy dog");
+
+
+
+   
+
+    //   function findLongestWordLength(str) {
+    //         return Math.max(...str.split(" ").map(word => word.length)); //  result  6 คือกับข้างบน
+    //         } 
+
+      function myFunction() {
+            var str = "How are you doing today?";
+            var res = str.split(" ");
+            document.getElementById("demo").innerHTML = res;  //How,are,you,doing,today?
+
+
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let animal =[10,20,30]
+         let all_animal =  animal.reduce((a,b)=>{
+           return  a+b;
+         })
+         console.log(all_animal) // 60
+
+         animal.push(40);
+         console.log("animal",animal)   ///[10, 20, 30, 40];
+
+        let animal_plus = animal.map((animal)=>{
+            return  animal*2
+        })
+        console.log("animal_plus",animal_plus)    //reuslt animal_plus (4) [20, 40, 60, 80]
+      
+         
+        function check_number(data){
+            let result =(data % 2 == 0)?data:"odd";
+             return  console.log("check_num",result);
+        }
+        check_number(11)
+        
+        let leaf =["cover","oil","grass"]
+          let resut = leaf.indexOf("oil")
+          console.log("indexof oil",resut) //result 1 
+
+        let ken_animok=[1,2,3,4,5]
+         let sl= ken_animok.slice(2)  // slice(start,end) 
+         let sl2= ken_animok.slice(1,2);
+         let sl3= ken_animok.slice(0,3)
+         let sl4=ken_animok.slice(-1)
+         console.log("sl",sl);  // [3,4,5]
+         console.log("sl2",sl2) //[2]
+         console.log("sl3",sl3) //[1,2,3]
+         console.log("sl4",sl4);//[5] -1คือตัวสุดท้าย ของ อาเร 
+
+         //  splice 
+     // splice (ตำแหน่งที่จะลบม,จำนวนที่จะลบ)
+    // slice (ตำแหน่งเริ่มต้น,ตำแหน่งสุดท้าย-1)
+
+         const teamAvengers =[
+           'captan',
+           'thor',
+           'iron',
+           'Hulk'
+      ]
+        teamAvengers.splice(1,3)
+        console.log("teamAdven::::::",teamAvengers);
+
+
+
+
+        //  ใช้กับ String 
+         let srt_leaf = "PalmLeaf"
+          let sl_str = srt_leaf.slice(4);
+          console.log("stl_str=::",sl_str) //result // stl_str=:: Leaf
+
+          //add string
+         let color_leaf ="_Geen";
+         let all = srt_leaf+color_leaf;
+          console.log(all);//  PalmLeaf_Geen
+          
+         
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //เดิมที่ให้มา
+      // function quickCheck(arr, elem) {
+      //     }
+      //     console.log(quickCheck(["squash", "onions", "shallots"], "mushrooms"));
+
+      //แก้
+      function quickCheck(arr, elem) {
+        if (arr.indexOf(elem) >= 0) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log(quickCheck(["squash", "onions", "shallots"], "mushrooms"));
+     //ถ้า mushroom  เป็น index  มีอยู่ใน อาเร แล้ว index  >= 0   true
+
+
+      //แก้โจท โดยใช้index of
+      //โจทต้องการ ผลลัพ ถ้า  console.log(quickCheck(["onions", "squash", "shallots"], "onions")); ต้องมีค่า เป็น true
+      //โจทต้องการ ผลลัพ ถ้า  quickCheck(["squash", "onions", "shallots"], "mushrooms") ต้องมีค่า เป็น false
+    </script>
+  </body>
+</html>

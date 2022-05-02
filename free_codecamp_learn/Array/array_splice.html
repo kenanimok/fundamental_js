@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      // splice (ตำแหน่งที่จะลบม,จำนวนที่จะลบ   ,เพิ่ม )
+    // slice (ตำแหน่งเริ่มต้น,ตำแหน่งสุดท้าย-1)
+        let fruitsx = ["Banana", "Orange", "Apple", "Mango"];
+        // At position 2, add 2 elements: 
+        fruitsx.splice(2, 0, "Lemon", "Kiwi");
+        console.log(fruitsx)   ///  ผบลลัพ ['Banana', 'Orange', 'Lemon', 'Kiwi', 'Apple', 'Mango']
+        
+        
+        let fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+        // At position 2, add 2 elements, remove 1: 
+          fruits2.splice(2, 1, "Lemon", "Kiwi")    /// ผล ['Banana', 'Orange', 'Lemon', 'Kiwi', 'Mango']
+          console.log(fruits2)
+
+          let fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+        // At position 2, add 2 elements, remove 2: 
+          fruits3.splice(2, 2, "Lemon", "Kiwi")
+          console.log(fruits3)        //['Banana', 'Orange', 'Lemon', 'Kiwi']
+
+
+          let fruits4  =["Banana", "Orange", "Apple", "Mango", "Kiwi"];
+            // At position 2, add 2 elements: 
+            fruits4.splice(2,2)
+            console.log("frut",fruits4)  //['Banana', 'Orange', 'Kiwi']
+
+
+            const arr = [2, 4, 5, 1, 7, 5, 2, 1];
+            arr.splice(1, 4);
+            console.log(arr);  // [ 2, 5, 2, 1 ]
+
+
+            const arr2= [2, 4, 5, 1, 7, 5, 2, 1];
+            arr2.splice(1, 2);
+            console.log(arr2);// [ 2, 1, 7, 5, 2, 1 ]
+
+
+
+            const  fruit_sl =["Banana", "Orange", "Lemon", "Apple", "Mango"];
+                fruit_sl.slice(1,3)// output   //[Orange,Lemon]
+
+
+                
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

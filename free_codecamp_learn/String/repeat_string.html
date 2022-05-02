@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repeat Method </title>
+</head>
+<body>
+    <script>
+        function repeatStirigNumTImes(str,num){
+            let result = str.repeat(num);  
+            return console.log(result )
+        }
+        repeatStirigNumTImes("abc",3)
+
+        //repeat 
+        let text = "ken";
+        let text_rp =  text.repeat(3)  
+        console.log(text_rp)// result kenkenken
+
+
+        //is use for 
+     function No_pr(str,num){
+         let accumualtedStr ="";
+         for(let i = 0; i<num; i++){
+             accumualtedStr += str;
+         }
+         return console.log("ผล  ",accumualtedStr)
+     }
+     No_pr("dog",3)    ///+=  สารมารต่อ  string  ได้ 
+     
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array  sort</title>
+</head>
+<body>
+
+    <script>
+        
+            //use Array sort
+            const point =[20,10,99,39,1]
+            const point_s = point.sort();
+            console.log("points_s",point_s ) //  [1, 10, 20, 39, 99]
+        
+
+            const animal =[10,40,2,44,101]
+            const animal_desc  = animal.sort((a,b)=>{
+                return b-a
+                console.log("aniDesc",animal_desc)  // [1, 10, 20, 39, 99]
+            })
+    </script>
+    
+</body>
+</html>
