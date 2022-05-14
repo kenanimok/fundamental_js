@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            // input * [4,6,2,1,9,63,-134,566]         -> max = 566, min = -134
+
+             var arr =[1,2,3];
+             var max = Math.max(...arr);
+             console.log("Max",max)  //result  = 3
+
+
+
+
+
+             var min = function(list){
+                list.sort((a, b) => (a - b));
+                return console.log(" use sort  min ",list[0]);
+            }
+
+            var max2 = function(list){
+                list.sort((a, b) => (b - a));
+                return list[0];
+            }
+
+            min([4,6,2,1,9,63,-134,566]);
+
+
+
+        //min max  use for loop  
+         var animal = [3,4,12,1,5];
+         var min_useF = animal[0]
+        for(let i=1;i<animal.length;i++){
+            // console.log("animal[i]",animal[i])
+            if(animal[i]<min_useF){
+              console.log("result::: ",min_useF=animal[i])   //result 1 
+            }
+        }
+
+
+
+         </script>
+    
+</body>
+</html>

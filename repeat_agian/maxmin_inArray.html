@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maxmin in array</title>
+</head>
+<body>  
+    <script>
+            let person =[1,2,3,4,5]
+            let maxperson = Math.max(...person);
+            console.log("maxperson",maxperson)        // result 5
+
+            let minperson =Math.min(...person);
+            console.log("minperosn",minperson)//result 1
+
+
+
+
+
+
+            function Minmax_arr(arr){
+                let min = Math.min(...arr)
+                let max = Math.max(...arr)
+                return console.log(`min${min} and max ${max}`)
+            }
+            Minmax_arr([1,5,2])
+
+
+
+        //    //filter
+        //     let fil_person = person.filter((p)=>{
+        //         return p < 2
+        //     })
+        //     console.log("filterperson",fil_person) // 1
+
+        //    //reduce array
+
+        //    let reduce_person = person.reduce((idx,item)=>{
+        //        return idx+item
+        //    })
+        //    console.log("reduce_person",reduce_person)   //result 15
+
+           
+    </script>
+    
+</body>
+</html>

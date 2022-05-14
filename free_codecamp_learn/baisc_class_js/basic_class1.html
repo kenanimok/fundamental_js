@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic class</title>
+</head>
+<body>
+        <script>
+            class Car {
+                constructor(name,year){
+                    this.name = name;
+                    this.year = year;
+                }
+            }
+
+            const myCarFord = new Car("Ford",2013)
+            console.log(myCarFord) // result  {name: 'Ford', year: 2013}
+
+
+
+
+
+
+            class Car2 {
+                constructor(name,year){
+                    this.name = name;
+                    this.year = year;
+                }
+                age(){
+                    let date = new Date();
+                    return date.getFullYear() - this.year
+                }
+            }
+
+            const myCar_fino = new Car2("Fino",2013)
+            console.log("myCar_fino is ",myCar_fino.age())  // mycar fino is 9
+
+
+
+            class Car3{
+                constructor(name,year){
+                    this.name =name;
+                    this.year = year;
+                }
+                age(x){
+                    return x - this.year; // 2022-2014
+                }
+            }
+            let date = new Date();
+            let year = date.getFullYear();
+            // console.log("fetfull year",year)
+            let mycar3 = new Car3("Kubota",2014)
+            console.log("mycar 3",mycar3.age(year))  // reuslt 8
+
+
+
+
+
+
+
+        </script>
+    
+</body>
+</html>

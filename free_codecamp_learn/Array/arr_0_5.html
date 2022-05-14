@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            //โจท Example : n=5 --> [5,4,3,2,1]
+
+            function n_5(n){
+                let  newArr =[]
+                for(i=1;i<=n;i++){
+                  newArr.push(i)
+                }
+                return console.log(newArr.reverse()) ;
+
+            }
+        
+            n_5(5);
+
+
+            const reverseSeq = n => {
+            let arr = [];
+            for (let i=n; i>0; i--) {
+                arr.push(i);
+                } return console.log("use i -- ",arr)
+            };
+            reverseSeq(5)
+
+        </script>
+</body>
+</html>

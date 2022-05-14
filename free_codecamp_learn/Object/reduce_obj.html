@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce obj</title>
+</head>
+<body>  
+    <script>
+            const users = [
+        { name: 'John', age: 34 },
+        { name: 'Amy', age: 20 },
+        { name: 'camperCat', age: 10 }
+        ];
+
+        const sumOfAges = users.reduce((sum, user) => sum + user.age, 0);
+        console.log(sumOfAges) // 64
+        console.log(users[0].name)// jhon
+
+
+
+
+
+        const animal = [
+        { name: 'John', age: 34 },
+        { name: 'Amy', age: 20 },
+        { name: 'camperCat', age: 10 }
+        ];
+
+        const animalObj = animal.reduce((obj, animal) => {
+        obj[animal.name] = animal.age;
+        return obj;
+        }, {});
+        console.log(usersObj);  //result {John: 34, Amy: 20, camperCat: 10}
+
+                    
+    </script>
+    
+</body>
+</html>

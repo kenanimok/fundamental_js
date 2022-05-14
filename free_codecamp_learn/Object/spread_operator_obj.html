@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    let obj1 = { foo: 'bar', x: 42 };
+    let obj2 = { loo: 'baz', y: 13 };
+
+    let clonedObj = { ...obj1 };
+    // Object { foo: "bar", x: 42 }
+
+    let mergedObj = { ...obj1, ...obj2 };
+    // Object { foo: "baz", x: 42, y: 13 }
+    console.log(mergedObj)
+        </script>
+    
+</body>
+</html>
