@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sort obj</title>
+</head>
+<body>
+        <script>
+              drinks = [
+            {name: "lemonade", price: 50},
+            {name: "lime", price: 10}
+            ]
+            
+            let  sort_price = drinks.sort((a,b)=>a.price-b.price)    // จัดเรียงจาก ราคาต่ำ ไปสสูง
+            console.log(sort_price)
+
+
+
+
+            // use  function
+            drinks2 = [
+            {name: "lemonade", price: 50},
+            {name: "lime", price: 10},
+            {name: "coffee", price: 80}
+            ]
+
+            function Sort_drink2(drink2){
+                return  console.log("drink2::",drink2.sort((a,b)=>{
+                    return a.price-b.price
+                }))
+            }
+            Sort_drink2(drinks2);
+
+
+        </script>
+    
+</body>
+</html>

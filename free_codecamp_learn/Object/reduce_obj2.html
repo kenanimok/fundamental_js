@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+
+            function getBudgets(arr) {
+                let sumbudget = arr.reduce((a,b)=>a+b.budget,0)
+                return console.log(sumbudget)
+                 //65700
+            }
+
+            getBudgets([
+            { name: "John", age: 21, budget: 23000 },
+            { name: "Steve",  age: 32, budget: 40000 },
+            { name: "Martin",  age: 16, budget: 2700 }
+            ])
+
+                    </script>
+    
+</body>
+</html>

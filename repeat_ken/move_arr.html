@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>move arr</title>
+</head>
+<body>
+        <script>
+            //arr = [1,2,3,4] ย้าย เป้น  [4,2,3,1]
+
+            //arr =['a','b','c','d] =>[a,c,b,d]
+
+            
+            // ทบทวน   splice array   
+
+            let person1 =[1,2,3,4,5]
+                console.log("person1_splcie::",person1.splice(1,2))  //reuslt [2,3]
+                //ไม่คสรทำ
+
+            let person2 =[1,2,3,4,5]
+                person2.splice(1,2)
+                console.log("person2",person2)  //result [1,4,5]
+                //ควร ใช้แบบนี้จะได้ไม่งง 
+
+
+
+
+            let fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+                fruits3.splice(2,2,99)
+                console.log("fruit3",fruits3)
+
+
+
+            let arr_1 = [1,2,3,4]
+                arr_1.splice(0,1,4)
+                arr_1.splice(3,1,1)
+                console.log("arr1",arr_1)// result [4,3,2,1]
+
+    
+
+
+                function arraymove(arr, fromIndex, toIndex) {
+                    var element = arr[fromIndex];
+                    arr.splice(fromIndex, 1);
+                    arr.splice(toIndex, 0, element);
+                    return console.log("arr_move",arr)
+                }
+                arraymove(['a','b','c','d'],3,0)
+
+
+
+
+
+
+
+
+                 
+        </script>
+    
+</body>
+</html>
