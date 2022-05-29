@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // function semulateAsyncAPI(text,timeout){
+        //     setTimeout(()=>console.log(text),timeout)
+        // }
+
+        // semulateAsyncAPI('A',1000)
+        // semulateAsyncAPI('B',500)
+        // semulateAsyncAPI('A',100)
+
+
+        // ใช้ call back 
+
+        // function semulateAsyncAPI2(text,timeout,callback){
+        //     setTimeout(()=>{
+        //         console.log(text)
+        //         callback();
+        //     },timeout);
+        // }
+
+        // semulateAsyncAPI2('A',1000,()=>{
+        //     console.log("callback")
+        // })  
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+        // function semulateAsyncAPI3(text,timeout,callbackhell){
+        //     setTimeout(()=>{
+        //         console.log(text)
+        //         callbackhell();
+        //     },timeout)
+        // }
+
+        // semulateAsyncAPI3('A',1000,()=>{
+        //   semulateAsyncAPI3('B',1000,()=>{
+        //     semulateAsyncAPI3('C',1000,()=>{
+        //     })
+        //   })
+        // })
+
+
+
+        ///////////////////////////////////////////promise use then
+            // function semulateAsyncAPI4(text,timeout){
+            //     return new Promise((resolve,reject)=>{
+            //         setTimeout(()=>{
+            //             console.log(text);
+            //             resolve();
+            //         },timeout)
+            //     })
+            // }
+
+            // semulateAsyncAPI4('A',1000)
+            // .then(()=>{
+            //     // console.log("ken")
+            //     return semulateAsyncAPI4('B',1000)
+            // })
+            // .then(()=>{
+            //     // console.log("ken")
+            //     return semulateAsyncAPI4('C',1000)
+            // })
+
+
+
+            // function semulateAsyncAPI5(text,timeout){
+            //     return new Promise((resolve,reject)=>{
+            //         setTimeout(()=>{
+            //             if(text ==='B')return reject("B go reject")
+            //             console.log(text);
+            //             resolve();
+            //         },timeout)
+            //     })
+            // }
+
+            // semulateAsyncAPI5('A',1000)
+            // .then(()=>{
+            //     return semulateAsyncAPI5('B',1000)
+            // })
+            // .then(()=>{
+            //     return semulateAsyncAPI5('C',1000)
+            // })
+            // .catch((error)=>{    //ดัก error
+            //     console.error(error);
+            // })
+
+
+            /////////////////////////////////////// use  aysnc  
+         
+            function semulateAsyncAPI6(text,timeout){
+                return new Promise((resolve,reject)=>{
+                    setTimeout(()=>{
+                        if(text ==='B')return reject("B go reject")
+                        console.log(text);
+                        resolve();
+                    },timeout)
+                })
+            }
+
+            async function run(){
+                try{
+                    await semulateAsyncAPI6('A',1000);
+                    await semulateAsyncAPI6('C',1000);
+
+                }catch(error){
+                    console.error(error);
+                }
+            }
+
+            run();
+
+
+    </script>
+    
+</body>
+</html>
