@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for off</title>
+</head>
+<body>
+    <script>
+        const cars = ["BMW", "Volvo", "Mini"];
+        let text =''
+        for(let x of cars){
+            text+= x+'/'
+        }
+        console.log(text)
+        // result BMW/Volvo/Mini/
+
+
+
+        const fruits = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+        ]);
+        let total = 0;
+        for (const x of fruits.values()) {
+        total += x;
+        }
+        console.log(total)
+        // result 1000
+
+
+
+        const fruits2 = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+        ]);
+
+        let text2 = "";
+        for (const x of fruits.values()) {
+        text += x + "<br>";
+        }
+        console.log(text2)
+        // reuslt 500 300 200
+
+
+        const arr = ['B', 'a', 'b', 'e', 'l']
+        for (let ele of arr) {
+        console.log(ele)
+        }
+        // ผลลัพธ์
+        // "B"
+        // "a"
+        // "b"
+        // "e"
+        // "l"
+
+
+
+        const arr2 = ['B', 'a', 'b', 'e', 'l']
+        arr2.forEach((element, index, array) => console.log(element, index, array))
+        // ผลลัพธ์
+        // ผลลัพธ์
+        // "B" 0 ["B", "a", "b", "e", "l"]
+        // "a" 1 ["B", "a", "b", "e", "l"]
+        // "b" 2 ["B", "a", "b", "e", "l"]
+        // "e" 3 ["B", "a", "b", "e", "l"]
+        // "l" 4 ["B", "a", "b", "e", "l"]
+
+
+
+    </script>
+    
+</body>
+</html>

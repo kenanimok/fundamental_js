@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for IN</title>
+</head>
+<body>
+    <script>
+                const Num =[22,33,44,55]
+                let text =''
+                for(let x in Num){
+                    text += Num[x]+'/'
+                }
+                console.log(text)
+                //result 22/33/44/55/
+
+
+        const numbers = [45, 4, 9, 16, 25];
+            let result = "";
+            numbers.forEach(myFunction);
+
+            function myFunction(value, index, array) {
+            result += value+'/';
+            }
+            console.log(result)
+            //result45/4/9/16/25/
+
+
+
+
+
+            const person = {
+            name: 'Somchai Haha',
+            age: 99, // ใกล้ตายแล้ว
+            gender: 'male',
+            }
+            for (let key in person) {
+            console.log(key)
+            }
+            // ผลลัพธ์
+            // "name"
+            // "age"
+            // "gender"
+
+
+            const person2 = {
+            name: 'Somchai Haha',
+            age: 99, 
+            gender: 'male',
+            }
+
+            for (let val in person2) {
+            console.log(person2[val])
+            }
+             // ผลลัพธ์
+            // 'Somchai Haha'
+            // 99
+            // male
+
+    </script>
+    
+</body>
+</html>

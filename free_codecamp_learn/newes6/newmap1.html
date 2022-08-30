@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let map = new Map();
+            map.set("1", "str1");
+            console.log(map.get('1'))     
+                //result  'str1'
+
+
+            let john = { name: "John" };
+            let visitsCountMap = new Map();
+            // john is the key for the map
+            visitsCountMap.set(john, 123);
+            // reuslt 123
+
+
+            const fruit = new Map([
+            ["apples", 500],
+            ["bananas", 300],
+            ["oranges", 200]
+            ])
+            console.log(fruit.get('apples')) //result 500
+
+    </script>
+    
+</body>
+</html>

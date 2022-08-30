@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obj property</title>
+</head>
+<body>
+    <script>
+        const person = {
+        firstname: "John",
+        lastname: "Doe",
+        age: 50,
+        eyecolor: "blue"
+        };
+
+        console.log(person.firstname) 
+        //result john
+        console.log(person['firstname'])
+        //result john
+
+
+        const person2 = {
+            fname:"John",
+            lname:"Doe",
+            age:25
+            }; 
+
+            let text =[]
+            for (let x in person2) {
+                text.push(person2[x])
+            }
+            console.log(text)
+            //result ['John', 'Doe', 25]
+      
+    </script>
+    
+</body>
+</html>
