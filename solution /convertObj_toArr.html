@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert arr to obj</title>
+</head>
+<body>
+    <script>
+
+    // toArray({ a: 1, b: 2 }) ➞ [["a", 1], ["b", 2]]
+
+    // toArray({ shrimp: 15, tots: 12 }) ➞ [["shrimp", 15], ["tots", 12]]
+
+    // toArray({}) ➞ []
+
+       const ConvertArrToObj = (obj)=>{
+        const convert = Object.entries(obj)
+        return console.log('convert', convert)
+       }
+       ConvertArrToObj({ a: 1, b: 2 })
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
