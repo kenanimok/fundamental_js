@@ -15,12 +15,24 @@
 
     // toArray({}) ➞ []
 
-       const ConvertArrToObj = (obj)=>{
-        const convert = Object.entries(obj)
-        return console.log('convert', convert)
-       }
-       ConvertArrToObj({ a: 1, b: 2 })
 
+
+
+    //    const ConvertArrToObj = (obj)=>{
+    //     const convert = Object.entries(obj)
+    //     return console.log('convert', convert)
+    //    }
+    //    ConvertArrToObj({ a: 1, b: 2 })
+
+
+
+
+      const ConvertArrToObj2 =(obj)=>{
+        const convert2= Object.keys(obj).map(x => [x, obj[x]]);
+        return console.log(convert2)
+      }
+      ConvertArrToObj2({ a: 1, b: 2 })
+    //   result     // toArray({ a: 1, b: 2 }) ➞ [["a", 1], ["b", 2]]
 
 
 
