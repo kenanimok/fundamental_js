@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const  obj1 = {name:"ken"}
+         obj1.age = 30
+
+         //// 👇️ {name: 'Tom', age: 30, country: 'Chile'}
+         console.log(obj1) 
+
+
+         const obj2  = {}
+         const key = 'city';
+         obj2[key] ='Santiago'
+         // 👇️ {city: 'Santiago'}
+         console.log('obj2',obj2)
+
+
+         const obj3 = {country: 'Chile'};
+        Object.assign(obj3, {color: 'red', food: 'pizza'});
+
+        // 👇️️ {country: 'Chile', color: 'red', food: 'pizza'}
+        console.log(obj3);
+
+
+
+    </script>
+    
+</body>
+</html>
