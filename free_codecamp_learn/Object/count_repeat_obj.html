@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>นับจำนวนชื่อซ้ำ</title>
+  </head>
+  <body>
+    <script>
+      const cars = [
+        { id: 1, make: "ford" },
+        { id: 2, make: "zzz" },
+        { id: 3, make: "ford" },
+      ];
+
+      const countCar = cars.reduce((count, car) => {
+        if (car.make === "ford") {
+          count += 1;
+        }
+        return count;
+      }, 0);
+
+      console.log("countCar", countCar);
+      // result  count2
+    </script>
+  </body>
+</html>

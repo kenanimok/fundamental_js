@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // countNumberOfOccurrences({
+      // a: "moron",
+      // b: "scumbag",
+      // c: "moron",
+      // d: "idiot",
+      // e: "idiot"
+      // }) ➞ { moron: 2, scumbag: 1, idiot: 2 }
+
+      // นับจำนวนซ้ำใน array แล้วจัดเรียงใหม่
+
+      //   function countNumberOfOccurrences(o) {
+      //     r = {};
+      //     Object.values(o).forEach((e) => {
+      //       r[e] ? (r[e] += 1) : (r[e] = 1);
+      //     });
+      //     return console.log ("r",r)
+      // }
+
+      function countNumberOfOccurrences(obj) {
+        const result = Object.values(obj).reduce((obj2, key) => {
+          console.log(obj2[key]);
+          if (!obj2[key]) obj2[key] = 1;
+          else obj2[key] += 1;
+          return obj2;
+        }, {});
+        return console.log("result", result);
+      }
+
+      countNumberOfOccurrences({
+        a: "moron",
+        b: "scumb",
+        c: "moron",
+        d: "idiot",
+        e: "idiot",
+      });
+    </script>
+  </body>
+</html>
