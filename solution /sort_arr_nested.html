@@ -8,12 +8,13 @@
   </head>
   <body>
     <script>
-      function mapping(arr) {
-        let conv = arr.reduce((a, v) => ({ ...a, [v]: v }), {});
-        return console.log(conv);
-      }
+      //   sortIt([[3], 4, [2], [5], 1, 6]) ➞ [1, [2], [3], 4, [5], 6]
 
-      mapping(["p", "s"]);
+      const sortArr = (arr) => {
+        const result = arr.sort((a, b) => a[0] - b);
+        return console.log("result", result);
+      };
+      sortArr([[3], 4, [2], [5], 1, 6]);
     </script>
   </body>
 </html>
