@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>group obj2</title>
+  </head>
+  <body>
+    <script>
+      const people = [
+        { name: "Lee", age: 21 },
+        { name: "Ajay", age: 20 },
+        { name: "Jane", age: 20 },
+      ];
+
+      // ต้อง การ result
+      // { 20: [ { name: 'Ajay', age: 20 }, { name: 'Jane', age: 20 } ],
+      //   21: [ { name: 'Lee', age: 21 } ] }
+
+      function groupBy(objectArray, property) {
+        return objectArray.reduce((acc, obj) => {
+          const key = obj[property];
+          console.log("key", key);
+          // console.log("acc[key]", typeof acc);
+
+          if (!acc[key]) {
+            acc[key] = [];
+          }
+          acc[key].push(obj);
+          return acc;
+        }, {});
+      }
+      const result = groupBy(people, "age");
+      console.log("result", result);
+
+      const items = [
+        {
+          name: "dell-66",
+          price: 200,
+          id: 12,
+        },
+        {
+          name: "dell-66",
+          price: 999,
+          id: 99,
+        },
+        {
+          name: "hp-44",
+          price: 100,
+          id: 10,
+        },
+        {
+          name: "acer-33",
+          price: 250,
+          id: 33,
+        },
+        {
+          name: "dell-66",
+          price: 200,
+          id: 12,
+        },
+        {
+          name: "acer-33",
+          price: 250,
+          id: 33,
+        },
+        {
+          name: "dell-66",
+          price: 200,
+          id: 12,
+        },
+      ].reduce((res, obj) => {
+        res[obj.name] = {
+          item_price:
+            (obj.name in res ? res[obj.name].item_price : 0) + obj.price,
+        };
+        return res;
+      }, {});
+
+      console.log(items);
+    </script>
+  </body>
+</html>
