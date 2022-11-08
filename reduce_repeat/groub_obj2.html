@@ -33,52 +33,6 @@
       }
       const result = groupBy(people, "age");
       console.log("result", result);
-
-      const items = [
-        {
-          name: "dell-66",
-          price: 200,
-          id: 12,
-        },
-        {
-          name: "dell-66",
-          price: 999,
-          id: 99,
-        },
-        {
-          name: "hp-44",
-          price: 100,
-          id: 10,
-        },
-        {
-          name: "acer-33",
-          price: 250,
-          id: 33,
-        },
-        {
-          name: "dell-66",
-          price: 200,
-          id: 12,
-        },
-        {
-          name: "acer-33",
-          price: 250,
-          id: 33,
-        },
-        {
-          name: "dell-66",
-          price: 200,
-          id: 12,
-        },
-      ].reduce((res, obj) => {
-        res[obj.name] = {
-          item_price:
-            (obj.name in res ? res[obj.name].item_price : 0) + obj.price,
-        };
-        return res;
-      }, {});
-
-      console.log(items);
     </script>
   </body>
 </html>
