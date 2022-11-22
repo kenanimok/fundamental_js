@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  [] --> []
+      // ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
+
+      const Indexof = (arr) => {
+        const data = arr.map((item, index) => index + 1 + ":" + item);
+        return console.log(data);
+      };
+
+      Indexof(["a", "b", "c"]);
+    </script>
+  </body>
+</html>
