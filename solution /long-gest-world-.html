@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Input: "I love dogs"
+      // Output: love
+
+      const Chekword = (sen) => {
+        const arr = sen.match(/[a-z]+/gi);
+        const sorted = arr.sort((a, b) => b.length - a.length);
+        return console.log("sorted[0]", sorted[0]);
+      };
+
+      Chekword("I love dogs");
+
+      // use split('')
+
+      function LongestWord(sen) {
+        let result = "";
+        sen
+          .replace(/[^a-zA-Z ]/gi, "")
+          .split(" ")
+          .forEach((word) =>
+            word.length > result.length ? (result = word) : null
+          );
+        return result;
+      }
+
+      LongestWord("I love dogs");
+    </script>
+  </body>
+</html>

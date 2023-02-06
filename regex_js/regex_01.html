@@ -8,15 +8,13 @@
   </head>
   <body>
     <script>
-      //slice stirng
-      function Slc_string(str) {
-        return console.log(str.slice(-3));
+      function reverseLetter(str) {
+        let fil = /[a-zA-Z]+/g;
+        let ans = str.match(fil);
+        let all = ans.reduce((prev, cur) => prev + cur);
+        let data = all.split(" ").reverse().join();
       }
-      Slc_string("fgedcba"); //result cba
-
-      const ken = "12345";
-      // console.log("ken---slice", ken.slice(3));
-      // result 45
+      reverseLetter("ultr53o?n");
     </script>
   </body>
 </html>
