@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // {
+      //   name: "Benny",
+      //   phone: "3325558745",
+      //   email: "benny@edabit.com"
+      // }
+
+      // // The second object parameter.
+
+      // {
+      //   name: "Jason",
+      //   phone: "9853759720",
+      //   email: "jason@edabit.com"
+      // }
+
+      // ➞ false
+
+      // The first object parameter.
+
+      // {
+      //   name: "Jason",
+      //   phone: "9853759720",
+      //   email: "jason@edabit.com"
+      // }
+
+      // // The second object parameter.
+
+      // {
+      //   name: "Jason",
+      //   phone: "9853759720",
+      //   email: "jason@edabit.com"
+      // }
+
+      // ➞ true
+
+      const obj1 = {
+        name: "Benny",
+      };
+
+      const obj2 = {
+        // name: "Jason",
+        // phone: "9853759720",
+        // email: "jason@edabit.com",
+        name: "Benny",
+      };
+
+      const checkObj = (obj1, obj2) => {
+        return console.log(
+          "first",
+          JSON.stringify(obj1) === JSON.stringify(obj2)
+        );
+      };
+      checkObj(obj1, obj2);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // concat([1, 2, 3], [4, 5], [6, 7]) ➞ [1, 2, 3, 4, 5, 6, 7]
+
+      // concat([1], [2], [3], [4], [5], [6], [7]) ➞ [1, 2, 3, 4, 5, 6, 7]
+
+      // concat([1, 2], [3, 4]) ➞ [1, 2, 3, 4]
+
+      // concat([4, 4, 4, 4, 4]) ➞ [4, 4, 4, 4, 4]
+
+      const conArr = (...data) => {
+        const newdata = data.flat(Infinity);
+        console.log("newdata", newdata);
+      };
+      conArr([1], [2], [3], [4], [5], [6], [7]);
+    </script>
+  </body>
+</html>

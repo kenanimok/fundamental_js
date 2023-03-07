@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // myFunction({a:1,b:2,c:3}) ==> ['a','b','c']
+
+      //   function myFunction(a) {
+      //     const key = Object.keys(a);
+      //     const data = [key];
+      //     console.log("data", data);
+      //   }
+      //   myFunction({ a: 1, b: 2, c: 3 });
+
+      function myFunction(a) {
+        const data = Object.values(a);
+        const alldata = data.reduce((a, b) => a + b);
+        console.log("alldata", alldata);
+        // return alldata;
+      }
+      myFunction({ a: 1, b: 2, c: 3 });
+    </script>
+  </body>
+</html>

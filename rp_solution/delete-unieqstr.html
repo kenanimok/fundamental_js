@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // findLetters("monopoly") ➞ ["m", "n", "p", "l", "y"]
+
+      // findLetters("balloon") ➞ ["b", "a", "n"]
+
+      // findLetters("analysis") ➞ ["n", "l", "y", "i"]
+
+      const findLetters = (str) => {
+        // const newdata = str.split('').filter(el=>str.indexOf(el)==str.lastIndexOf(el))
+        const sp = str.split("");
+        const newdata = sp.filter((item) => {
+          //   console.log("item", item);
+          //   console.log("str.indexOf(item)", str.indexOf(item));
+          //   console.log("str.lastIndexOf(item)", str.lastIndexOf(item));
+          return str.indexOf(item) === str.lastIndexOf(item);
+        });
+
+        console.log("newdata", newdata);
+      };
+      findLetters("analysis");
+    </script>
+  </body>
+</html>

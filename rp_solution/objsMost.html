@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   mostExpensiveItem({
+      //     tv: 30,
+      //     skate: 20,
+      //     stereo: 50,
+      //   })
+
+      const mostExpensiveItem = {
+        tsdfsdfdfsdfsdfsdfv: 30,
+        skate: 20,
+        stereo: 50,
+      };
+
+      const MostExpentsive = (data) => {
+        // const datamax = Object.keys(data).reduce((a, b) =>
+        //   data[a] > data[b] ? a : b
+        // );
+
+        const datamax = Object.keys(data).sort((a, b) => data[b] - data[a])[0];
+
+        return console.log("datamax", datamax);
+      };
+      MostExpentsive(mostExpensiveItem);
+    </script>
+  </body>
+</html>
