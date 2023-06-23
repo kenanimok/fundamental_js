@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // getFrequencies(["A", "B", "A", "A", "A"]) ➞ { A: 4, B: 1 }
+
+      // getFrequencies([1, 2, 3, 3, 2]) ➞ { "1": 1, "2": 2, "3": 2 }
+
+      // getFrequencies([true, false, true, false, false]) ➞ { true: 2, false: 3 }
+
+      // getFrequencies([]) ➞ {}
+
+      const Groub_obj = (data) => {
+        const newdata = data.reduce((acc, value) => {
+          console.log("acc", acc);
+          //   console.log("value", value);
+          return { ...acc, [value]: (acc[value] || 0) + 1 };
+        }, {});
+
+        console.log("newdata", newdata);
+      };
+      Groub_obj(["A", "B", "A", "A", "A"]);
+
+      // user for loop
+      const arr = ["one", "one", "one", "two", "two", "three"];
+      const count = {};
+      for (const element of arr) {
+        count[element] = (count[element] || 0) + 1;
+      }
+
+      // 👇️ { one: 3, two: 2, three: 1 }
+      console.log(count);
+    </script>
+  </body>
+</html>

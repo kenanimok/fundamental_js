@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //     invert({ "a": 1, "b": 2, "c": 3 })
+      //   ➞ { 1: "a", 2: "b", 3: "c" }
+
+      const myFunction = (data) => {
+        const newdata = Object.entries(data).reduce((acc, [key, value]) => {
+          console.log("[key, value]", [key, value]);
+          console.log("key", key);
+
+          acc[value] = key;
+          return acc;
+        }, {});
+        console.log("newdata", newdata);
+      };
+
+      myFunction({ a: 1, b: 2, c: 3 });
+
+      // const for loop
+
+      const myFunction2 = (data) => {
+        const newdata2 = {};
+        for (i in data) {
+          newdata2[data[i]] = i;
+        }
+        // console.log("newdata2", newdata2);
+      };
+
+      myFunction2({ a: 1, b: 2, c: 3 });
+    </script>
+  </body>
+</html>

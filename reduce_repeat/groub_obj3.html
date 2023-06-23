@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //reuslt
+
+      //     {
+      //   "blue": [
+      //     {
+      //       "name": "Jim",
+      //       "color": "blue",
+      //       "age": 22
+      //     },
+      //     {
+      //       "name": "Sam",
+      //       "color": "blue",
+      //       "age": 33
+      //     }
+      //   ],
+      //   "green": [
+      //     {
+      //       "name": "Eddie",
+      //       "color": "green",
+      //       "age": 77
+      //     }
+      //   ]
+      // }
+
+      const person = [
+        {
+          name: "Jim",
+          color: "blue",
+          age: 22,
+        },
+        {
+          name: "Sam",
+          color: "blue",
+          age: 33,
+        },
+        {
+          name: "Eddie",
+          color: "green",
+          age: 77,
+        },
+      ];
+
+      const groubBy = (arr, key) => {
+        const newData = arr.reduce((acc, curr) => {
+          //   console.log("curr", curr);
+          const { color } = curr;
+          //   console.log("color", color);
+          //   console.log("acc[color]", acc[color]);
+          //   console.log("curr", curr);
+          if (!acc[color]) {
+            acc[color] = [];
+          }
+
+          acc[color].push(curr);
+
+          return acc;
+        }, {});
+      };
+
+      groubBy(person);
+    </script>
+  </body>
+</html>

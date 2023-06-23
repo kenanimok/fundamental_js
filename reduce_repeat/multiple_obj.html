@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //    ({ a: 1, b: 2, c: 3 }, 3);
+      //  result   {a:3,b:6,c:9}
+
+      const multiObj = (a, b) => {
+        const newObj = {};
+        for (i in a) {
+          newObj[i] = a[i] * b;
+        }
+        return newObj;
+      };
+      multiObj({ a: 1, b: 2, c: 3 }, 3);
+
+      // use Reduce
+
+      //   function myFunction(a, b) {
+      //     return Object.entries(a).reduce((acc, [key, val]) => {
+      //       return { ...acc, [key]: val * b };
+      //     }, {});
+      //   }
+    </script>
+  </body>
+</html>

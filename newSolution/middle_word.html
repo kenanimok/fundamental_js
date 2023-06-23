@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ood 2
+      // even 1
+      // Kata.getMiddle("test") should return "es"
+
+      // Kata.getMiddle("testing") should return "t"
+
+      // Kata.getMiddle("middle") should return "dd"
+
+      // Kata.getMiddle("A") should return "A"
+
+      const getMiddle = (data) => {
+        const newData = data.split("");
+        const dataLenght = newData.length / 2;
+        if (newData.length % 2 === 0) {
+          return newData
+            .slice(dataLenght - 1, dataLenght + 1)
+            .join()
+            .replace(",", "");
+        } else {
+          return newData.slice(dataLenght, dataLenght + 1).join();
+        }
+      };
+      getMiddle("test");
+      //   getMiddle("testing");
+      //   getMiddle("tes");
+      //   getMiddle("A");
+    </script>
+  </body>
+</html>
